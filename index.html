@@ -1,8 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>My Portfolio</title>
-    </head>
-    <body></body>
-</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prasanth's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: #f0f0f0;
+            color: #333;
+            overflow-x: hidden;
+        }
+        header {
+            background: #222;
+            color: white;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        header h1 {
+            font-size: 2em;
+        }
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background: #00bcd4;
+            left: 0;
+            bottom: -5px;
+            transition: 0.4s ease;
+        }
+        nav a:hover {
+            color: #00bcd4;
+        }
+        nav a:hover::after {
+            width: 100%;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 30px auto 20px auto;
+            display: block;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            animation: fadeIn 1s ease forwards;
+        }
+        .interests {
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            animation: slideUp 1.2s ease forwards;
+        }
+        .interests span {
+            display: inline-block;
+            margin: 0 10px;
+            animation: bounce 2s infinite;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        section {
+            padding: 40px 60px;
+        }
+        .section-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #444;
+        }
+        .about, .projects, .contact {
+            background: white;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 30px;
+            animation: fadeIn 1s ease forwards;
+        }
+        .project-item {
+            margin-bottom: 20px;
+        }
+        .project-item h3 {
+            color: #222;
+        }
+        .social-icons a {
+            margin-right: 15px;
+            color: #222;
+            font-size: 1.5em;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        .social-icons a:hover {
+            transform: scale(1.2);
+            color: #00bcd4;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #222;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Prasanth</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
+    <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-pic">
+    <div class="interests">
+        <span>🤖 AI</span>
+        <span>⚙️ Automation</span>
+        <span>💡 Innovation</span>
+        <span>📚 Learning</span>
+    </div>
+
+    <section id="about" class="about">
+        <h2 class="section-title">About Me</h2>
+        <p>Hello! I'm Prasanth, an automation engineer with a curiosity for artificial intelligence and digital tools that make life easier (and cooler). I enjoy tinkering with tech, building smart systems, and exploring how AI can simplify daily work.</p>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-item">
+            <h3>AI-Powered Maintenance Monitor</h3>
+            <p>Developed a monitoring dashboard to detect anomalies in rotating equipment using AI models and live sensor data.</p>
+        </div>
+        <div class="project-item">
+            <h3>Personal Blog on AI</h3>
+            <p>Created a minimalist blog on GitHub Pages to share AI use cases, tutorials, and personal experiments with tools like ChatGPT.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <p>Feel free to reach out if you're into AI, automation, or just enjoy a good geeky chat over coffee ☕.</p>
+        <div class="social-icons">
+            <a href="https://github.com/prasanthebenezer" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/prasanth-philip" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:prasanthebenezer@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Prasanth Philip. All rights reserved.</p>
+    </footer>
+</body>
+</html>
